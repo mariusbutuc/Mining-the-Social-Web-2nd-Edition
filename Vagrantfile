@@ -76,7 +76,8 @@ Vagrant.configure("2") do |config|
     aws.region = "us-west-2"
     aws.instance_type = "t1.micro"
 
-    override.vm.box = "aws"
+    override.vm.box = "dummy"
+    override.vm.box_url="https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box"
     override.ssh.username = "ubuntu"
     override.ssh.private_key_path = ENV['MTSW_KEYPAIR_PATH']
 
